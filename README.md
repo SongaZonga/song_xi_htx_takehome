@@ -95,7 +95,8 @@ Rather than relying solely on the Trainer's default logging, a custom callback w
 
 ---
 
-## One Thing I'd Change With More Time
+## One thing I would change with more time
 
-**Replace the JSON/log file outputs with a self-hosted MLflow instance.**
-Right now metrics are split across `metrics.json` and `training.log`, which works but is not queryable across multiple runs. MLflow (self-hosted, fitting the on-premises constraint from Part A) would give run comparison, a promotion history, and model artifact versioning in one place. The promotion logic in `promotion.py` would stay the same — the decision would just be recorded as an MLflow tag rather than written into a JSON file.
+**CI tests for the promotion check**
+Currently the unit tests in `tests/` only run when someone manually invokes them. This is risky as `should_promote` decides whether a fine-tuned model gets saved. An improvement here would be to include a GitHub Actions workflow that runs the tests on every push and pull request.
+
