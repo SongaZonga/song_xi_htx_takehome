@@ -76,7 +76,7 @@ uv run pytest tests/
 ## Design Decisions
 
 **Training via Google Colab**
-Google Colab was used due to initial hardware limitations where training on my local Nvdia rtx2060 GPU would take about 1 hour to complete. Therefore I opted to use Colab with an A100 GPU, which reduced the training time to 9 mins.
+Google Colab was chosen as to emulate the GPU cluster performance. Training locally on an NVIDIA RTX 2060 took roughly 1 hour, while Colab's A100 reduced this to 9 minutes. In a production setting this would be swapped for the team's on-premises GPU cluster.
 
 **Dataset versioning via `revision="main"`**
 `datasets.load_dataset("imdb", revision="main")` pins the dataset to a specific upstream commit on the HuggingFace Hub. This is lightweight but sufficient — IMDb is a static benchmark that does not change. Storing the HuggingFace cache on Drive means the dataset is only fetched once and is available across Colab sessions without re-downloading.
