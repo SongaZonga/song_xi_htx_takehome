@@ -25,7 +25,7 @@ This pipeline fine-tunes a DistilBERT model on the IMDb sentiment classification
 
 ### 1. Open the notebook in Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SongaZonga/song_xi_htx_takehome/blob/main/pipeline.ipynbb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SongaZonga/song_xi_htx_takehome/blob/main/pipeline.ipynb)
 
 Click the badge above, or paste this URL into your browser:
 
